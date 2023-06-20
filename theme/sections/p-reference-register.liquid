@@ -1,0 +1,74 @@
+<div class="section-register container">
+  <div class="form-register">
+    <header class="form-header">
+      <h1 class="h1">{{ 'customer.registration.title' | t }}</h1>
+      <p>{{ 'customer.registration.description' | t | newline_to_br }}</p>
+    </header>
+    <div class="form-input-wrap">
+      <div class="form-input-label">
+        <label>{{ 'customer.registration.email' | t }}</label>
+        <span>{{ 'customer.registration.require' | t }}</span>
+      </div>
+      <input type="text" class="form__field form__field--text">
+    </div>
+    <div class="form-input-wrap">
+      <div class="form-input-label">
+        <label>{{ 'customer.registration.phone_number' | t }}</label>
+        <span>{{ 'customer.registration.require' | t }}</span>
+      </div>
+      <input type="text" class="form__field form__field--text">
+    </div>
+    <div class="form-input-wrap">
+      <div class="form-input-label">
+        <label>{{ 'customer.registration.customer_number' | t }}</label>
+        <span>{{ 'customer.registration.require' | t }}</span>
+      </div>
+      <input type="text" class="form__field form__field--text">
+    </div>
+    <div class="form-action">
+      <label class="form-checkbox">
+        <input type="checkbox">
+        <span>{{ 'customer.registration.policy_confirm' | t }}</span>
+      </label>
+      <button
+        type="submit"
+        class="button button-reference button--full"
+        onclick="showModalConfirm()">
+        <span></span>
+        <span>{{ 'customer.registration.btn_reference' | t }}</span>
+        <span>></span>
+      </button>
+      {% render 'popup', popup-id: 'direct-register' %}
+      <div class="form-link">
+        <a href="#" class="link link--secondary">{{ 'customer.registration.policy_title' | t }}<span>{{ 'customer.registration.policy_link' | t }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<button
+  id="btn-to-top"
+  type="button"
+  class="button-arrow"
+  onclick="moveToTop()">
+  {%- render 'icon', icon: 'arrow-up' -%}
+</button>
+
+<link rel="stylesheet" href="{{ 'page.reference-register.css' | asset_url }}">
+<script>
+  // show modal confirm register
+  function showModalConfirm() {
+    const modalRegister = document.getElementById('direct-register');
+    modalRegister.setAttribute('aria-hidden', 'false')
+    preventScrollPopup();
+
+    const btnToTop = document.getElementById('btn-to-top');
+    btnToTop.classList.add('disable');
+  }
+</script>
+
+{% schema %}
+  {
+    "name": "Reference Register"
+  }
+{% endschema %}

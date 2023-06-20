@@ -1,0 +1,111 @@
+.section-register {
+  max-width: 865px;
+  margin-top: 60px;
+  font-family: "Work San", sans-serif;
+  font-size: 16px;
+  color: #707070;
+}
+
+.form-register {
+  text-align: center;
+}
+
+.form-header {
+  margin-bottom: 36px;
+}
+
+.form-header h1 {
+  margin-bottom: 62px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.form-header p {
+  margin-bottom: 10px;
+}
+
+.form-input-wrap {
+  margin-bottom: 36px;
+}
+
+.form-input-label {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-input-label label {
+  margin-right: 20px;
+}
+
+.form-input-label span {
+  padding: 5px;
+  font-size: 12px;
+  background-color: #d9d9d9;
+}
+
+.form-action {
+  margin: 0 36px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+
+.form-link {
+  margin-top: 14px;
+  margin-bottom: 80px;
+}
+
+.form-link span {
+  text-decoration: underline;
+}
+
+.button-reference {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  box-shadow: 0 0 0 1px var(--border-color) inset;
+  font-size: 16px;
+  color: #707070;
+}
+
+.button-reference span:nth-child(2) {
+  font-weight: 700;
+}
+
+.button-reference:hover {
+  background: rgba(var(--border-color-rgb), 0.5);
+  color: var(--text-color);
+}
+
+.button-arrow {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 9px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+
+.button-arrow.disable {
+  background: #b9b9b9;
+  cursor: auto;
+}
+
+.button-arrow svg {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+}

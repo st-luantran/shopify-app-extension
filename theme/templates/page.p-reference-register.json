@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "p-reference-register": {
+      "type": "p-reference-register",
+      "settings": {}
+    }
+  },
+  "order": ["p-reference-register"]
+}
