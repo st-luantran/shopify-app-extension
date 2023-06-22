@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import { RouterProvider } from 'react-router-dom'
 
-import AppConstant from './constants/app'
-
 import router from './router'
 
 const App = () => {
@@ -24,7 +22,7 @@ const App = () => {
         const nonce = 'nonce'
         const access_mode = 'per-user'
         const client_id = apiKey
-        const scopes = 'read_customers,read_orders'
+        const scopes = 'read_customers,read_orders,write_customers'
         const authorizeUrl = `https://${shop}/admin/oauth/authorize?client_id=${client_id}&scope=${scopes}&redirect_uri=${redirect_uri}&state=${nonce}&grant_options[]=${access_mode}`
         window.location.replace(authorizeUrl)
 
