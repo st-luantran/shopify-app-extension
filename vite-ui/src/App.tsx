@@ -22,7 +22,8 @@ const App = () => {
         const nonce = 'nonce'
         const access_mode = 'per-user'
         const client_id = apiKey
-        const scopes = 'read_customers,read_orders,write_customers'
+        const scopes =
+          'read_customers,read_orders,write_customers,write_discounts,write_delivery_customizations,read_delivery_customizations'
         const authorizeUrl = `https://${shop}/admin/oauth/authorize?client_id=${client_id}&scope=${scopes}&redirect_uri=${redirect_uri}&state=${nonce}&grant_options[]=${access_mode}`
         window.location.replace(authorizeUrl)
 

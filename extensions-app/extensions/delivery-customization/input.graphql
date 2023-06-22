@@ -1,0 +1,22 @@
+query Input {
+  cart {
+    deliveryGroups {
+      deliveryAddress {
+        provinceCode
+        countryCode
+      }
+      deliveryOptions {
+        handle
+        title
+      }
+    }
+  }
+  deliveryCustomization {
+    metafield(
+      namespace: "delivery-customization"
+      key: "function-configuration"
+    ) {
+      value
+    }
+  }
+}
