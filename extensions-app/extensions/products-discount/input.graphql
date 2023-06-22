@@ -1,0 +1,28 @@
+query Input {
+  discountNode {
+    metafield(namespace: "$app:dev", key: "function-configuration") {
+      value
+    }
+  }
+
+  cart {
+    attribute(key: "ATTRIBUTE_KEY") {
+      value
+    }
+    lines {
+      id
+      quantity
+      merchandise {
+        ... on ProductVariant {
+          id
+          component_parents: metafield(
+            namespace: "custom"
+            key: "component_parents"
+          ) {
+            value
+          }
+        }
+      }
+    }
+  }
+}

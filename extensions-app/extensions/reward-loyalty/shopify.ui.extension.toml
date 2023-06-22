@@ -1,0 +1,23 @@
+type = "checkout_ui_extension"
+name = "reward-loyalty"
+
+extension_points = [
+  'Checkout::Dynamic::Render'
+]
+
+[[metafields]]
+namespace = "POINTS"
+key = "POINTS"
+
+# Read more on extension settings at https://shopify.dev/api/checkout-extensions/checkout/configuration
+[settings]
+  [[settings.fields]]
+  key = "banner_title"
+  type = "single_line_text_field"
+  name = "Banner title"
+  description = "Enter a title for the banner"
+  [[settings.fields]]
+  key = "banner_description"
+  type = "multi_line_text_field"
+  name = "Banner Description"
+  description = "Enter a description for the banner"
